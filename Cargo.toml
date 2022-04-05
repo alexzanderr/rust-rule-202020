@@ -1,0 +1,28 @@
+[package]
+name = "rule_202020"
+version = "0.0.1"
+edition = "2021"
+
+default-run = "rule_202020"
+
+[[bin]]
+name = "rule_202020"
+path = "src/bin/main.rs"
+
+
+[dependencies]
+core-dev = { path = "../core-dev", features = [
+"datetime", "audio", "core", "linuxapi", "image"] }
+notify-rust = { version = "4.5.8", features = ["images"] }
+xdg-utils = "0.4.0"
+ctrlc = { version = "3.2.1", features = ["termination"] }
+open = "2.1.1"
+chrono = "0.4.19"
+time = { version = "0.3.9", features = ["parsing"] }
+clap = { version = "3.1.8", features = ["derive"] }
+ansi_term = { version = "0.12.1", features = ["derive_serde_style", "serde"] }
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+color-backtrace = "0.5.1"
+soloud = "1.0.2"
+image = "0.24.1"
